@@ -1,0 +1,9 @@
+#App-header {
+  //width: inherit;
+  display: grid;
+  //padding-bottom: 1.25em;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+  grid-template-columns: repeat(2, 1fr);
+}

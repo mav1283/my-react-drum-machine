@@ -1,0 +1,9 @@
+#display-section {
+  @include box_shadow(0px, 2px, 1px, var(--trans-darken));
+  @include border_radius(6px);
+  border: 2px outset rgba(255, 255, 255, 0.125);
+  padding: 1em;
+  display: grid;
+  grid-template-rows: minmax(150px, 1fr) auto auto;
+  grid-gap: 1em;
+}

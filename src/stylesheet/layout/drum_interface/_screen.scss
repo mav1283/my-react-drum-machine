@@ -1,0 +1,38 @@
+#screen {
+  border: 2px inset rgba(0, 0, 0, 0.4);
+  @include box_shadow(0px, 1px, 1px, var(--trans-lighten));
+  @include border_radius(6px);
+  background: hsla(204, 70%, 53%, 0.3);
+  color: rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'DS-DIGITAL', sans-serif;
+  font-style: italic;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0) 12.5%,
+      rgba(255, 255, 255, 0.25) 25%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.25) 75%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-radius: inherit;
+  }
+}
+
+#screen.on {
+  background: hsla(204, 70%, 53%, 1);
+  color: rgba(255, 255, 255, 1);
+  @include text_shadow(0px, 0px, 6px, var(--trans-light-mid));
+}

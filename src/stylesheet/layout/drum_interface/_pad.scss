@@ -1,0 +1,87 @@
+.pad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  text-transform: uppercase;
+  @include border_radius(6px);
+  @include box_shadow(0px, 3px, 3px, var(--trans-dark-mid));
+  border: 2px outset rgba(255, 255, 255, 0.125);
+  cursor: pointer;
+  &:first-child {
+    background: var(--green-sea);
+  }
+  &:nth-child(2) {
+    background: var(--nephritis);
+  }
+  &:nth-child(3) {
+    background: var(--belize-hole);
+  }
+  &:nth-child(4) {
+    background: var(--orange);
+  }
+  &:nth-child(5) {
+    background: var(--pumpkin);
+  }
+  &:nth-child(6) {
+    background: var(--pomegranate);
+  }
+  &:nth-child(7) {
+    background: var(--midnight-blue);
+  }
+  &:nth-child(8) {
+    background: var(--asbestos);
+  }
+  &:last-child {
+    background: var(--wisteria);
+  }
+}
+
+.pad.light-on {
+  &:first-child {
+    @include light_on(var(--turquoise));
+  }
+  &:nth-child(2) {
+    @include light_on(var(--emerald));
+  }
+  &:nth-child(3) {
+    @include light_on(var(--peter-river));
+  }
+  &:nth-child(4) {
+    @include light_on(var(--sunflower));
+  }
+  &:nth-child(5) {
+    @include light_on(var(--carrot));
+  }
+  &:nth-child(6) {
+    @include light_on(var(--alizarin));
+  }
+  &:nth-child(7) {
+    @include light_on(var(--wet-asphalt));
+  }
+  &:nth-child(8) {
+    @include light_on(var(--concrete));
+  }
+  &:last-child {
+    @include light_on(var(--amethyst));
+  }
+}
+
+.pad.light-off {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    background: var(--trans-dark);
+
+    z-index: 10;
+  }
+}

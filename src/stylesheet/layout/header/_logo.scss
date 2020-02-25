@@ -1,0 +1,25 @@
+#logo {
+  display: grid;
+  h1 {
+    text-align: left;
+    /*     width: 25vmax; */
+    display: inline-block;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    padding-right: 0.75rem;
+  }
+  p {
+    font-size: 0.75rem;
+    text-align: left;
+    font-style: italic;
+    color: var(--trans-lighter);
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+  }
+  .orange {
+    color: var(--orange);
+  }
+}

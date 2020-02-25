@@ -1,0 +1,72 @@
+input[type='range'].volume-slider {
+  @include appearance_none;
+  height: 8px; /* Specified height */
+  width: inherit;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 12.5%,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0.3) 87.5%
+  ); /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  @include border_radius(20px);
+  border: 1px outset rgba(255, 255, 255, 0.125);
+  @include box_shadow(0px, 0px, 1px, var(--trans-lighten));
+  padding: 0 0.25rem;
+  position: relative;
+}
+
+input[type='range'].volume-slider::-webkit-runnable-track {
+  @include appearance_none;
+}
+
+input[type='range'].volume-slider::-moz-range-track {
+  background: transparent;
+}
+
+input[type='range'].volume-slider::-webkit-slider-thumb {
+  @include appearance_none;
+  background: radial-gradient(circle, #fff, var(--clouds), var(--silver));
+  width: 1.25rem;
+  height: 1.25rem;
+  @include box_shadow(0px, 2px, 1px, var(--trans-darken));
+  border: 2px outset rgba(255, 255, 255, 0.05);
+  @include border_radius(50%);
+  color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+input[type='range'].volume-slider::-moz-range-thumb {
+  background: radial-gradient(circle, #fff, var(--clouds), var(--silver));
+  width: 1.25rem;
+  height: 1.25rem;
+  @include box_shadow(0px, 2px, 1px, var(--trans-darken));
+  border: 2px outset rgba(255, 255, 255, 0.05);
+  @include border_radius(50%);
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+input[type='range'].volume-slider::-webkit-progress-value {
+  @include appearance_none;
+  height: 4px;
+  border-radius: inherit;
+  background: var(--nephritis);
+}
+
+input[type='range'].volume-slider::-moz-range-progress {
+  height: 4px;
+  border-radius: inherit;
+  background: var(--nephritis);
+}
+
+input[type='range'].volume-slider::-ms-fill-lower {
+  height: 4px;
+  border-radius: inherit;
+  background: var(--nephritis);
+}
+
+.volume-label > * {
+  color: var(--trans-light);
+}

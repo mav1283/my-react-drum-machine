@@ -1,0 +1,4 @@
+.App {
+  @include grid_space_vertical(1em);
+  text-align: center;
+}

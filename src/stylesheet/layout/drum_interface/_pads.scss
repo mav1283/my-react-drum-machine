@@ -1,0 +1,6 @@
+#pads {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(64px, 1fr));
+  grid-template-rows: repeat(3, minmax(64px, 1fr));
+  grid-gap: 0.5em;
+}

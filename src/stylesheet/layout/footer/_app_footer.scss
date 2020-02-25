@@ -1,0 +1,8 @@
+#App-footer {
+  position: relative;
+  @extend .flex_centered;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--trans-lighter);
+  grid-column: 1 / -1;
+}

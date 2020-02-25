@@ -1,0 +1,28 @@
+#power {
+  display: grid;
+  #power-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.125),
+      rgba(255, 255, 255, 0)
+    );
+    @include box_shadow(0px, 3px, 3px, var(--trans-darken));
+    border: 2px solid hsla(145, 63%, 42%, 0.3);
+    color: hsla(145, 63%, 42%, 0.3) !important;
+    outline: var(--emerald);
+    cursor: pointer;
+  }
+  #power-btn.on {
+    color: var(--emerald) !important;
+    border: 2px solid var(--emerald);
+    @include box_shadow(0px, 0px, 3px, var(--emerald));
+  }
+}

@@ -1,0 +1,52 @@
+.bank-btn {
+  position: relative;
+  @include border_radius(2px);
+  @include box_shadow(0px, 3px, 3px, var(--trans-dark-mid));
+  border: 2px outset rgba(255, 255, 255, 0.125);
+  outline: none;
+  background: transparent;
+  text-transform: uppercase;
+  color: var(--trans-darkest);
+  font-weight: 600;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.bank-btn.drums {
+  background: hsla(37, 90%, 51%, 0.3);
+}
+
+.bank-btn.drums.on {
+  background: hsla(37, 90%, 51%, 1);
+  box-shadow: 0px 0px 3px var(--orange);
+  -webkit-box-shadow: 0px 0px 3px var(--orange);
+}
+
+.bank-btn.synth {
+  background: hsla(145, 63%, 42%, 0.3);
+}
+
+.bank-btn.synth.on {
+  background: hsla(145, 63%, 42%, 1);
+  box-shadow: 0px 0px 3px var(--nephritis);
+  -webkit-box-shadow: 0px 0px 3px var(--nephritis);
+}
+
+.bank-btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: inherit;
+  z-index: 100;
+}

@@ -1,0 +1,7 @@
+/* Toggle Switch */
+#bank-controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(30px, 1fr);
+  grid-gap: 0.25em;
+}

@@ -1,0 +1,41 @@
+/* Media Queries */
+
+@media screen and (min-width: 0px) {
+  #drum-machine {
+    grid-template-columns: 1fr;
+  }
+
+  #logo {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  #pads {
+    grid-row: 1;
+  }
+
+  #preset-status {
+    grid-row: 2;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #logo {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #drum-interface {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+
+  #pads {
+    grid-row: 1;
+  }
+
+  #preset-status {
+    grid-row: 1;
+  }
+}
